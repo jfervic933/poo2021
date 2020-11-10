@@ -24,5 +24,16 @@ public class Galleta {
     
     // Métodos
     
+    // Constructor de galleta
+    public Galleta(String forma, String sabor, String color, boolean
+            tieneChoco, double gr){
+        // La forma de este objeto (this) igual a la forma del parámetro
+        this.forma = forma;
+        this.sabor = sabor;
+        this.color = color;
+        this.tieneChocolate = tieneChoco;
+        this.gramos = gr;
+                
+    }
     
 }
