@@ -5,6 +5,8 @@
  */
 package jcarlos.poo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author profesor
@@ -13,12 +15,52 @@ public class Programa {
     
     public static void main(String[] args) {
         
-        Galleta cookieChoco = new Galleta("Redonda", "Chocolate",
-        "Marrón", true, 10);
+        Scanner teclado = new Scanner(System.in);
         
-        System.out.println("Mi galleta tiene forma:" + 
+        System.out.println("¿Cómo quieres la galleta?");
+        System.out.println("Forma: ");
+        String forma = teclado.nextLine();
+        System.out.println("Color: ");
+        String color = teclado.nextLine();
+        System.out.println("sabor: ");
+        String sabor = teclado.nextLine();
+        System.out.println("Tiene choco?(si/no)");
+        String tmp = teclado.nextLine();
+        
+        boolean tieneChocolate = tmp.equalsIgnoreCase("si");
+        System.out.println("Gramos: ");
+        double gr = teclado.nextDouble();
+        System.out.println("Precio: ");
+        double precio = teclado.nextDouble();
+        
+        Galleta usuario = new Galleta(forma, sabor,
+        color, tieneChocolate, gr, precio);
+        
+        Galleta cookieChoco = new Galleta("Redonda", "Chocolate",
+        "Marrón", true, 10, 3.3);
+        
+        Galleta galletaMaria = new Galleta("Redonda", "Galleta",
+        "Marrón", false, 5, 1);
+        
+        Galleta galletaDinosaurio = new Galleta("TREX", "Mantequilla",
+        "Verde", false, 12, 45);
+        
+         System.out.println("Mi galleta Usuario tiene forma:" + 
+                usuario.forma);
+        
+        System.out.println("Mi galleta cookie tiene forma:" + 
                 cookieChoco.forma);
         
+        System.out.println("Mi galleta cookie tiene sabor:" + 
+                cookieChoco.sabor);
+        
+        System.out.println("Mi galleta María tiene sabor:" + 
+                galletaMaria.sabor);
+        
+        
+        System.out.println("Mi galleta Dino tiene " + 
+                galletaDinosaurio.sabor + " " + galletaDinosaurio.color
+         + " " + galletaDinosaurio.precio);
     }
        
     
