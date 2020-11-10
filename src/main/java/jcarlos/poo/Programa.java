@@ -12,7 +12,11 @@ package jcarlos.poo;
 public class Programa {
     
     public static void main(String[] args) {
-        System.out.println("Saludos");
+        
+        Galleta cookieChoco = new Galleta("Redonda", "Chocolate",
+        "Marrón", true, 10);
+        
+        
     }
        
     
