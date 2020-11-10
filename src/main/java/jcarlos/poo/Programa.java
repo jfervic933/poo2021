@@ -16,6 +16,8 @@ public class Programa {
         Galleta cookieChoco = new Galleta("Redonda", "Chocolate",
         "Marrón", true, 10);
         
+        System.out.println("Mi galleta tiene forma:" + 
+                cookieChoco.forma);
         
     }
        
