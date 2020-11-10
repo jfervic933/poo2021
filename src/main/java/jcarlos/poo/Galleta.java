@@ -21,18 +21,20 @@ public class Galleta {
     String color; // Marrón, blanca, etc
     boolean tieneChocolate; // True si, false no
     double gramos; // 15, 20, 34 gr
+    double precio;
     
     // Métodos
     
     // Constructor de galleta
     public Galleta(String forma, String sabor, String color, boolean
-            tieneChoco, double gr){
+            tieneChoco, double gr, double precio){
         // La forma de este objeto (this) igual a la forma del parámetro
         this.forma = forma;
         this.sabor = sabor;
         this.color = color;
         this.tieneChocolate = tieneChoco;
         this.gramos = gr;
+        this.precio = precio;
                 
     }
     
