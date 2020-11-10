@@ -9,6 +9,20 @@ package jcarlos.poo;
  *
  * @author profesor
  */
+
+// Declaración de una clase
 public class Galleta {
+    
+    // Dos partes
+    // Atributos de la clase
+    
+    String forma; // Redonda, cuadrada
+    String sabor; // Mantequilla, fresa, 
+    String color; // Marrón, blanca, etc
+    boolean tieneChocolate; // True si, false no
+    double gramos; // 15, 20, 34 gr
+    
+    // Métodos
+    
     
 }
