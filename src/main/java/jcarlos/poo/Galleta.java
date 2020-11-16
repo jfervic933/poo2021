@@ -13,9 +13,8 @@ package jcarlos.poo;
 // Declaración de una clase
 public class Galleta {
     
-    // Dos partes
-    // Atributos de la clase
-    // Visibilidad de atributos: 
+    // Las clase tienen dos partes: los atributos y los métodos
+    // Atributos de la clase y su Visibilidad: 
     // por defecto --> todas las clases del paquete
     // public --> todas las clases (cualquier paquete)
     // private --> no permite ver desde ninguna clase
