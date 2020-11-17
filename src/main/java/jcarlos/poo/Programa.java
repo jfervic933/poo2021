@@ -17,7 +17,20 @@ public class Programa {
         
         Scanner teclado = new Scanner(System.in);
         
+        Persona isaac = new Persona("Isaac", 22, 60);
+        
+        
+        
+        // Declaración
+        Galleta gall; // Apunta a null
+        
+        // Instanciar la variable gall
+        gall = new Galleta();
+        
+        gall.getColor(); 
+        
         Galleta g = new Galleta(23, 0.12);
+        
         
         Galleta g2 = new Galleta();
         
@@ -45,13 +58,13 @@ public class Programa {
 //        color, tieneChocolate, gr, precio);
         
         Galleta cookieChoco = new Galleta("Redonda", "Chocolate",
-        "Marrón", true, 10, 3.3);
+        "Marrón", true, 0.10, 3.3);
         
         Galleta galletaMaria = new Galleta("Redonda", "Galleta",
         "Marrón", false, 5, 1);
         
         Galleta galletaDinosaurio = new Galleta("TREX", "Mantequilla",
-        "Verde", false, 12, 45);
+        "Verde", false, 0.12, 45);
         
         System.out.println("Color de la galleta maria " + 
                 galletaMaria.getColor());
@@ -60,7 +73,11 @@ public class Programa {
         System.out.println("Forma de la galleta maria " + 
                 galletaMaria.getForma());
         
+        // Envío de mensajes entre objetos
+        isaac.comer(cookieChoco);
+        isaac.comer(galletaDinosaurio);
         
+        System.out.println("Isaac ahora pesa " + isaac.getPeso());
         
         galletaMaria.setGramos(10);
         System.out.println("Peso de la galleta maria " + 

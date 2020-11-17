@@ -15,7 +15,7 @@ public class OtroMain {
     
     public static void main(String[] args) {
         Galleta gall = new Galleta();
-        gall.sabor = "Vainilla";
+        
     }
     
 }

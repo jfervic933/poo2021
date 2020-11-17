@@ -13,6 +13,8 @@ package jcarlos.poo;
 // Declaración de una clase
 public class Galleta {
     
+    // Definición de los miembros de la clase
+    
     // Las clase tienen dos partes: los atributos y los métodos
     // Atributos de la clase y su Visibilidad: 
     // por defecto --> todas las clases del paquete
@@ -39,6 +41,7 @@ public class Galleta {
         this.tieneChocolate = tieneChoco;
         this.gramos = gr;
         this.precio = precio;
+        
                 
     }
     
