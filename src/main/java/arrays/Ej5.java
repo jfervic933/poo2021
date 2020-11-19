@@ -25,7 +25,7 @@ public class Ej5 {
         
         imprimirArray(otroArray);
         
-
+        
     }
 
     public static void imprimirArray(int[] array){
