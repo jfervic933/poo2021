@@ -7,18 +7,27 @@ package jcarlos.poo;
 
 /**
  *
- * @author profesor
+ * Sólo se pueden crear personas entre 0 y 199 años
+ * y además el peso estará limitado entre 3kg y 300 kg
  */
 public class Persona {
     
     private String nombre;
     private int edad;
-    private double peso; // Kg
+    public double peso; // Kg
 
     public Persona(String name, int old, double peso) {
         this.nombre = name;
         this.edad = old;
         this.peso = peso;
+        
+        if (old <0 || old > 199){
+            this.edad = 1; // Un año
+        }
+        if (peso <3 || peso > 300){
+            this.peso = 3; // tres kilos
+        }
+
     }
     
     // this siempre hace referencia a los atributos y métodos
@@ -37,15 +46,25 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad>=0 && edad <= 199){
+            this.edad = edad;
+        }
+        
     }
 
+    // Un método get siempre devuelve el mismo tipo de dato
+    // que el atributo al que hace referencia
+    // Dentro el método hace return del atributo de la clase
     public double getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
-        this.peso = peso;
+    // Un método set nunca devuelve valor (void)
+    // Recibe un parámetro con el tipo de dato igual al 
+    // tipo de dato al que hace referencia
+    // Dentro tiene la asignación al atributo del parámetro
+    public void setPeso(double x) {
+        this.peso = x;
     }
     
     public void comer(Galleta g){
