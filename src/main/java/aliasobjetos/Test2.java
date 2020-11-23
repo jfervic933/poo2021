@@ -31,6 +31,27 @@ public class Test2 {
         
         imprimirArray(array);
         
+        int[] variable = crearArray(); //aux
+        
+        for (int i = 0; i < variable.length; i++) {
+            System.out.println(variable[i]);
+        }
+        
+        // Recorrido de un array completo en modo lectura
+        // foreach
+        // En la parte izquierda se pone el tipo de dato que almacena
+        // el array y el nombre de una variable (el que quieras)
+        // :
+        // En la parte derecha se pone el nombre del array que 
+        // queremos recorrer
+        // Dentro del bucle no se usan índices, se usa la variable
+        // "numero"
+        for (int numero : array) {
+            //System.out.print(" - " + numero);
+            if (numero%2==0){
+                System.out.println(numero + " es par");
+            }
+        }
     }
     
     public static void cambiaValores(int[] alias) {
@@ -42,5 +63,13 @@ public class Test2 {
         for (int i = 0; i < alias.length; i++) {
             System.out.println("alias[" + i + "] = " + alias[i]);
         }
+    }
+    
+    public static int[] crearArray(){
+        int[] aux = new int[2];
+        aux[0] = 1;
+        aux[1] = 2;
+        
+        return aux;
     }
 }

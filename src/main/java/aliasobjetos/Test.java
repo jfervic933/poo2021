@@ -60,7 +60,7 @@ public class Test {
         System.out.println("-------------------------");
 
         // Se imprime el array completo usando la variable array2
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array2.length; i++) {
             System.out.println("array2[" + i + "] = " + array2[i]);
         }
     }
