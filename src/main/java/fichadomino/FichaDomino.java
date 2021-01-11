@@ -7,6 +7,26 @@ public class FichaDomino {
 	private int superior, inferior;
         
 	static Random aleatorio = new Random();
+        
+        
+        public static FichaDomino copiar(FichaDomino origen){
+            FichaDomino destino = new FichaDomino(origen.superior, origen.inferior);
+            
+            return destino;
+        }
+        
+        // Constructor copia
+        
+        public FichaDomino (FichaDomino objeto){
+       
+            // Llamada al constructor de la propia clase usando
+            // this()
+            // Si se usa este constructor siempre debe llamarse
+            // en la primera línea del constructor copia
+            this(objeto.superior, objeto.inferior);
+//            this.superior = objeto.superior;
+//            this.inferior = objeto.inferior;
+        }
 
 	public FichaDomino(int superior, int inferior) {
 		
@@ -62,7 +82,7 @@ public class FichaDomino {
             this.superior = superior;
             if(superior < 0 || superior > 6) {
 			if((superior % 2) == 0) {
-				this.superior = 6;
+                                this.superior = 6;
 			}else {
 				this.superior = 5;
 			}

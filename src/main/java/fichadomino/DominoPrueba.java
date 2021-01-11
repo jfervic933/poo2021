@@ -3,6 +3,7 @@ package fichadomino;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class DominoPrueba {
 
 	public static void main(String[] args) {
@@ -43,8 +44,19 @@ public class DominoPrueba {
                     System.out.println("El valor de la ficha generada es " + f5.toString() + 
 				"\nEl valor total de la ficha es: " + f5.getValorTotal());
 		}while(!dobleSeis(f5));
-                
+                imprimir(f5.getInferior());
 		System.out.println("El número de fichas creadas es: " + contador);
+                
+                FichaDomino copiaf5 = new FichaDomino(f5);
+                FichaDomino otracopia = f5; // Alias. Mismo espacio
+                FichaDomino copiaf3 = FichaDomino.copiar(f3);
+                System.out.println("f3: " + f3);
+                System.out.println("copiaf3: " + copiaf3);
+                f3.setInferior(0);
+                System.out.println("f3: " + f3);
+                System.out.println("copiaf3: " + copiaf3);
+                
+                
 	}
 	
 	//Metodo que se encarga de la lectura de uno de los dos valores necesarios para la ficha
@@ -74,12 +86,15 @@ public class DominoPrueba {
 		*/
                 if (ficha!=null){
                     return ficha.getValorTotal() == 12;
-                    //return (ficha.getSuperior() == 6 && ficha.getInferior() == 6);
-                }
+                   // return (ficha.getSuperior() == 6 && ficha.getInferior() == 6);
+                } 
+                
                 return false;
 		
 	}
 	
-	
+	public static void imprimir(int valor){
+            System.out.println("El valor es " + valor);
+        }
 
 }
