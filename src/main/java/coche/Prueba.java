@@ -34,7 +34,31 @@ public class Prueba {
         // p1.getVentana() --> ventana
         
         p1.getVentana().abrir();
-
+        
+        CocheProfesor c1 = new CocheProfesor(m2, 
+                r1, r2, new Rueda(), new Rueda(true, "Invierno"), 
+                p1, p2);
+        
+        CocheProfesor c2 = new CocheProfesor(new Motor(true, 12));
+        System.out.println(c1);
+        
+        // Cerrar la ventana de la puerta del copiloto del coche c1
+        c1.getPuertaCopiloto().getVentana().cerrar();
+        // Rueda trasera izquierda establecer su tipo a Invierno
+        c1.getRuedaTI().setTipo("Invierno");
+        // Abrir la puerta del piloto
+        c1.getPuertaPiloto().abrir();
+        
+        System.out.println(c1);
+        
+        // Apagar el motor de c2
+        c2.getMotor().apagar();
+        // Poner rueda delantera izquierda a c2
+        c2.setRuedaDI(new Rueda(true, "Verano"));
+        // Desinflar la rueda delantera izquierda de c2
+        c2.getRuedaDI().desinflar();
+        
+        System.out.println(c2);
     }
 
 }
