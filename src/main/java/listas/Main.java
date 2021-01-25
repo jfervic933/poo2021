@@ -41,7 +41,7 @@ public class Main {
         
         listaCadenas.add(1, "Sistemas"); // el índice debe ser >=0 y < size()
         
-        listaCadenas.forEach(System.out::println);
+        listaCadenas.forEach(e->System.out.println("Hola " + e));
         
         listaCadenas.remove("Lenguajes de marcas");
         
