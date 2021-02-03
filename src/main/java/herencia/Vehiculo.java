@@ -5,6 +5,7 @@
  */
 package herencia;
 
+import java.util.Objects;
 import vehiculos.*;
 
 /**
@@ -106,6 +107,51 @@ public class Vehiculo {
     @Override
     public String toString() {
         return "Vehiculo{" + "matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", precio=" + precio + ", disponible=" + disponible + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.matricula);
+        hash = 29 * hash + Objects.hashCode(this.marca);
+        hash = 29 * hash + Objects.hashCode(this.modelo);
+        hash = 29 * hash + Objects.hashCode(this.color);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.precio) ^ (Double.doubleToLongBits(this.precio) >>> 32));
+        hash = 29 * hash + (this.disponible ? 1 : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vehiculo other = (Vehiculo) obj;
+        if (Double.doubleToLongBits(this.precio) != Double.doubleToLongBits(other.precio)) {
+            return false;
+        }
+        if (this.disponible != other.disponible) {
+            return false;
+        }
+        if (!Objects.equals(this.matricula, other.matricula)) {
+            return false;
+        }
+        if (!Objects.equals(this.marca, other.marca)) {
+            return false;
+        }
+        if (!Objects.equals(this.modelo, other.modelo)) {
+            return false;
+        }
+        if (!Objects.equals(this.color, other.color)) {
+            return false;
+        }
+        return true;
     }
     
     

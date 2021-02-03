@@ -14,6 +14,12 @@ public class Turismo extends Vehiculo{
     private int numeroPuertas;
     private boolean marchaAutomatica;
 
+    public void activarVelocidadCrucero(){
+        
+        System.out.println("Activando velocidad crucero en turismo");
+        
+    }
+    
     public Turismo(int numeroPuertas, boolean marchaAutomatica, String matricula, String marca, String modelo, String color, double precio, boolean disponible) {
         // Constructor parametrizado de la super clase (padre)
         super(matricula, marca, modelo, color, precio, disponible);

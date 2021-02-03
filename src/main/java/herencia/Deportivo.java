@@ -30,5 +30,37 @@ public class Deportivo extends Vehiculo{
         this.cilindrada = cilindrada;
     }
     
+    public void activarModoSport(){
+        System.out.println("Activando modo sport en deportivo");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Deportivo{" + "cilindrada=" + cilindrada + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 47 * hash + this.cilindrada;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        
+        if (!super.equals(obj)){
+            return false;
+        }
+    
+        final Deportivo other = (Deportivo) obj;
+        
+        if (this.cilindrada != other.cilindrada) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
 }

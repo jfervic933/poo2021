@@ -5,6 +5,8 @@
  */
 package herencia;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author profesor
@@ -43,6 +45,35 @@ public class Prueba {
         t.reparar();
         d.reparar();
         t.reparar(2);
+        
+        // Conversión de tipos en una jerarquía de herencia
+        Vehiculo v1 = new Vehiculo();
+        // Conversión implícita
+        Vehiculo v2 = new Turismo(0, true, "1111AAA", "Chevrolet", "Impala", "Negro", 123.30, true);
+        Vehiculo v3 =  new Deportivo();
+        
+        ArrayList<Vehiculo> listaVehiculos = new ArrayList<>();
+        
+        listaVehiculos.add(v1);
+        // Conversiones implícitas entre la jerarquía
+        listaVehiculos.add(v2);
+        listaVehiculos.add(v3);
+        listaVehiculos.add(new Turismo());
+        listaVehiculos.add(new Deportivo(5, "1111BBB", "Ford", "Focus", "Rojo", 13.30, true));
+       
+        System.out.println("-----------------------------");
+        for (Vehiculo aux : listaVehiculos) {
+            System.out.println(aux);   
+            aux.arrancar();
+            // Conversiones explícitas
+            if (aux instanceof Turismo){
+                ((Turismo) aux).activarVelocidadCrucero();
+            }
+            if (aux instanceof Deportivo){
+                Deportivo tmp = (Deportivo) aux;
+                tmp.activarModoSport();
+            }
+        }
         
         
     }
